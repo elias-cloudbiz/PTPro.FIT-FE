@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+
+<router-outlet></router-outlet>
+<div *ngIf="this.auth.isAuthenticated()">
+    <app-messenger></app-messenger>
+</div>
+
+<app-bottom></app-bottom>

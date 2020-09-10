@@ -1,0 +1,204 @@
+<aside class="menu" id="menu">
+  <a href="#" class="mobile-menu-opener"><i class="fa fa-bars"></i></a>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="logo">
+      <a href="index.html" class="navbar-brand"><img src="https://v1.trening.fit/static/img/logo.png" alt="Logo"></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active">
+          <a class="page-scroll" href="#">#home</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="#">#searchpt</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="#">#about</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="#">#terms</a>
+        </li>
+        <li>
+          <a class="page-scroll" href="#">#contacts</a>
+        </li>
+        <li>
+          <hr>
+        </li>
+        <li>
+
+          <h4 class='text-center' style='color:white'>#Username</h4>
+          <a href="#" class='text-center page-scroll' style='color:orange'>#myPages</a>
+          <a href="#" class='text-center page-scroll' style='color:orange'>#Logout</a>
+
+
+          <a class="page-scroll" class='text-center' href="#"> #login </a>
+
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+</aside>
+
+<!-- Content Wrapper-->
+<div class="content-wrapper">
+  <!-- Banner -->
+  <div id="youtube-video" class="banner"
+    style="background-image:url(https://v1.trening.fit/static/dotfit/img/banner/1.png); height:250px">
+    <a class="player"
+      data-property="{videoURL:'https://youtu.be/at7QvbFy9fM',containment:'#youtube-video', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
+    <div class="caption-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-8 col-md-offset-2">
+            <div class="caption-info-inner text-center">
+              <h1>PTPro.fit - Demo</h1>
+              <h3 class="cd-headline clip is-full-width animated fadeInDown">
+                <span class=cd-words-wrapper>
+                  <b class="is-visible">{{ "Sosial og aktiv livstil plattform for alle brukere." | translate}}</b>
+                  <b>Finn en treningsplan, veileder og bygg nettverk i idrettsbransje.</b>
+                  <b>Finn en tilbud i din egen region og skap kommunikasjon i mellom.</b>
+                </span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<jw-modal id="Login" class="modal">
+  <div class="modal-content">
+    <a (click)="closeModal('Login')"><i class="fas fa-times"></i></a>
+    <!--LOGG INN-->
+    <app-login></app-login>
+  </div>
+</jw-modal>
+
+<!--Session Manager-->
+<jw-modal id="Session" class="modal">
+  <div class="modal-content">
+    <a (click)="closeModal('Session')"><i class="fas fa-times"></i> </a>
+    <!--Session-->
+    <app-session></app-session>
+  </div>
+
+</jw-modal>
+<!-- Healthcart -->
+<jw-modal id="Healthcart" class="modal healthcart" (click)="closeModal('Healthcart')">
+  <div class="modal-content healthcart">
+    <a (click)="closeModal('Healthcart')"><i class="fas fa-times"></i> </a>
+    <!-- Healthcart -->
+    <app-healthcart></app-healthcart>
+  </div>
+
+</jw-modal>
+
+<div class="container menu-container">
+  <div class="row">
+    <div class="menu col-md-3 col-xs-12">
+      <h5 class="text-center">
+        <a class="chip mypages" (click)="openModal('Session')" click="reloadPage()">
+          <i class="fas fa-cog"></i> &nbsp; {{'Session in' | translate }}: {{session.Region}}
+        </a>
+      </h5>
+    </div>
+    <div class="col-md-4">
+      <h5 class="text-center">
+        <div class="row" *ngIf="!authservice.isAuthenticated()">
+          <a *ngIf="miniNavigator" class="chip" routerLink="/" (click)="triggerMenu()"><i
+              class="fa fa-home icon-orange"></i>
+            &nbsp; {{'HOME' | translate }}
+          </a>
+          <a *ngIf="miniNavigator" class="chip " routerLink="/lookup" (click)="triggerMenu()"><i
+              class="fa fa-search "></i>
+            &nbsp; {{'SEARCH: PT' | translate }}
+          </a>
+          <a *ngIf="miniNavigator" class="chip" routerLink="/activity" (click)="triggerMenu()"><i
+              class="fa fa-user "></i>
+            &nbsp; {{'ACTIVE: PT' | translate }}
+          </a>
+        </div>
+        <div *ngIf="authservice.isAuthenticated()">
+          <a *ngIf="miniNavigator" class="chip" routerLink="/" (click)="triggerMiniNavigator()"><i
+              class="fa fa-home icon-orange"></i>
+            &nbsp;  {{'HOME' | translate }}
+          </a>
+          <a *ngIf="miniNavigator" class="chip " routerLink="/lookup" (click)="triggerMiniNavigator()"><i
+              class="fa fa-search "></i>
+            &nbsp; {{'SEARCH: PT' | translate }}
+          </a>
+          <a *ngIf="miniNavigator" class="chip" routerLink="/activity" (click)="triggerMiniNavigator()"><i
+              class="fa fa-user "></i>
+            &nbsp; {{'ACTIVE: PT' | translate }}
+          </a>
+        </div>
+      </h5>
+    </div>
+    <div class="col-md-2">
+      <h5 class=" text-center">
+        <div class="row">
+          <a class="chip services " (click)="redirect(0)">
+            &nbsp; <i class="fas fa-medkit" style="color:red"></i> &nbsp; {{'Your services' | translate }}
+          </a>
+        </div>
+      </h5>
+    </div>
+    <div class="col-md-3 col-xs-12">
+      <h5 class="text-center">
+        <div class="row" *ngIf="!authservice.isAuthenticated()">
+          <a routerLink="/meld-inn" class="chip mypages " (click)="triggerMenu()">
+            &nbsp; <i class="fas fa-user-plus"></i> &nbsp; {{'Register' | translate }}
+          </a>
+          <a class="chip mypages " (click)="openModal('Login'); ">
+            <i class="fas fa-user"></i> &nbsp; {{'Login' | translate }}
+          </a>
+        </div>
+        <div *ngIf="authservice.isAuthenticated()">
+          <a routerLink="/my" class="chip mypages" (click)="triggerMiniNavigator()">
+            &nbsp; <i class="fas fa-user-plus"></i> &nbsp; {{'Welcome: ' | translate }} {{getFirstName()}} {{getLastName()}}
+          </a>
+          <a routerLink="/" class="chip mypages" (click)="authservice.logout()" (click)="triggerMenu()">
+            &nbsp; <i class="fas fa-user-plus"></i> &nbsp; {{'Logout' | translate }}
+          </a>
+        </div>
+      </h5>
+    </div>
+  </div>
+</div>
+<!-- Main services -->
+<section *ngIf="!miniNavigator" id="main-services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 service-style">
+        <div class="content-right wow fadeInRight">
+          <a routerLink="/" class="btn btn-default btn-radius"><br><i class="fa fa-home fa-2x"
+              aria-hidden="true"></i><span class="front-text">
+              <h3> {{'HOME' | translate }}</h3>
+            </span><br> </a>
+        </div>
+      </div>
+      <div class="col-md-4 service-style">
+        <div class="content-right wow fadeInRight">
+          <a routerLink="/lookup" class="btn btn-default btn-radius"><br><i class="fa fa-search fa-2x"
+              aria-hidden="true"></i><span class="front-text">
+              <h3>{{'SEARCH: PT' | translate }}</h3>
+            </span><br> </a>
+        </div>
+      </div>
+      <div class="col-md-4 service-style">
+        <div class="content-right wow fadeInRight">
+          <a routerLink="/activity" class="btn btn-default btn-radius"><br><i class="fa fa-user fa-2x"
+              aria-hidden="true"></i><span class="front-text">
+              <h3>{{'ACTIVE: PT' | translate }}</h3>
+            </span><br> </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- End Main services -->
+<hr class="menu-divider">

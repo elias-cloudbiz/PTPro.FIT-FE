@@ -1,0 +1,143 @@
+hr.user-menu-line {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.menu-container{
+    width: 90% !important;
+}
+
+.float-right{
+    float:right;
+  
+}
+.float-left{
+  float:left;
+}
+
+/* The Modal (background) */
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+  }
+
+    /* Modal Content/Box */
+    .modal-content.healthcart {
+      width: 65%; /* Could be more or less, depending on screen size */
+    }
+  
+
+@media screen and (max-width: 1200px) {
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .modal.healthcart{
+    background-color: rgba(0,0,0,0.1);
+  }
+  
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+  .chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    border-radius: 10px;
+    background-color: #fefefe;
+    border: 1px solid #f65e13;
+    margin-left: 3px;
+  }
+
+  .chip:hover{
+    color:white;
+    background-color: #f65e13;
+    border: 1px solid #c9c9c9;
+  }
+
+
+
+  .chip.mypages {
+    display: inline-block;
+    padding: 0 25px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    border-radius: 25px;
+    background-color: #fefefe;
+    border: 1px solid #4e4e4e;
+    margin-left: 3px;
+  }
+
+  .chip.services {
+    display: inline-block;
+    padding: 0 25px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    border-radius: 10px;
+    background-color: rgba(251, 216, 190, 0.1);
+    border: 1px solid #f6b013;
+    margin-left: 3px;
+  }
+  .chip.services:hover {
+    color:#000000;
+    border: 1px solid #f6b013;
+    background-color: rgba(251, 216, 190, 1);
+
+  }
+
+  .chip.mypages:hover {
+    color:white;
+    border: 1px solid #c9c9c9;
+    background-color: #fa8449;
+
+  }
+
+  .seperator-vertical {
+    border-right: 1px dashed #333;
+  }
+
+  hr.menu-divider{
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
