@@ -1,21 +1,21 @@
-[submodule "src/app/modules/communication"]
-	path = src/app/modules/communication
-	url = https://github.com/elias-cloudbiz/ptpro_communication.git
-[submodule "src/app/modules/secure"]
-	path = src/app/modules/secure
-	url = https://github.com/elias-cloudbiz/ptpro_secure.git
 [submodule "src/app/modules/application"]
 	path = src/app/modules/application
-	url = https://github.com/elias-cloudbiz/ptpro_application.git
-[submodule "src/app/modules/payment"]
-	path = src/app/modules/payment
-	url = https://github.com/elias-cloudbiz/ptpro_payment.git
+	url = https://github.com/Skyinformatics-biz/ptpro_application.git
+[submodule "src/app/modules/communication"]
+	path = src/app/modules/communication
+	url = https://github.com/Skyinformatics-biz/ptpro_communication.git
 [submodule "src/app/modules/public"]
 	path = src/app/modules/public
-	url = https://github.com/elias-cloudbiz/ptpro_public.git
+	url = https://github.com/Skyinformatics-biz/ptpro_public.git
 [submodule "src/app/modules/profiles"]
 	path = src/app/modules/profiles
-	url = https://github.com/elias-cloudbiz/ptpro_profiles.git
+	url = https://github.com/Skyinformatics-biz/ptpro_profiles.git
 [submodule "src/app/providers"]
 	path = src/app/providers
-	url = https://github.com/elias-cloudbiz/ptpro_providers.git
+	url = https://github.com/Skyinformatics-biz/ptpro_providers.git
+[submodule "src/app/modules/secure"]
+	path = src/app/modules/secure
+	url = https://github.com/Skyinformatics-biz/ptpro_secure.git
+[submodule "src/app/modules/payment"]
+	path = src/app/modules/payment
+	url = https://github.com/Skyinformatics-biz/ptpro_payment.git
