@@ -3,8 +3,8 @@ import { HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class WebConfig {
-    public prod = 'https://ptpro.skyinformatics.biz/api/';
-    public local = 'http://localhost/ptpro-server-api/public/api/';
+    public prod = 'https://api.ptpro.fit/api/';
+    public local = 'http://localhost:8000/';
     public env = this.local;
     public token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImUwZTZmN2NjMDdiZjhhZjJlMDdhOGJiYWQwNTZmZjUyOTkxMDg1MDFmZGVkZGE3ZGJjNjMxNGVjNTBiMzY4MTc4NjUxYTViM2Q4YjNmMjE3In0.eyJhdWQiOiIxIiwianRpIjoiZTBlNmY3Y2MwN2JmOGFmMmUwN2E4YmJhZDA1NmZmNTI5OTEwODUwMWZkZWRkYTdkYmM2MzE0ZWM1MGIzNjgxNzg2NTFhNWIzZDhiM2YyMTciLCJpYXQiOjE1NDY1MTcxOTksIm5iZiI6MTU0NjUxNzE5OSwiZXhwIjoxNTc4MDUzMTk5LCJzdWIiOiIiLCJzY29wZXMiOltdfQ.iBX-oE_uxMTduGNDRzemWF-tkD07LeGFfqowFIxfeBCcUkCqP8KAvZK-iMXeN_N-WFEdudk9GkBBkbTpdjXGxJETmdKmCmK1_6Dd5virwaqq-SLs2XgH7p6fqijuttNZYfj2ET8ZfMqcF8ure0LmF4MZQcg70baQNxgedsO_EG9XRozDz3GK42MzPBb1cyMjOZq6LZ9fIkipAiuG6eWXignfljeVIVT5AYKsPd8f8mK7y4CPclHcjroYgmMNGmrla2zE3eH1A9VwmJbmwLse6RMiF5156HKuzldQjE5D7_7Xlt4WLhLmivFE1Q1qNvnK2YAqSHHgVPL9V15HdTUTfr2XCTskmn3q65C64x2f42D5iKRPPdu1FAC6m0XQ1R8PB2x5LHCkfMPuDtj_fHlr0_bzvWz9xpEizR5xt6RQHf0ELaS8vQUI5y9gp2eskGbF1GSMC26lTeeyoxRJzBLLlwAsHVXjkKmsRm1xd2-EtBg4bwa86z3FIjazr-y72LDD_NVIYCIbJCdjmtWoDfzu1A4ro2bTrZuFBjuvQofZwWxPxr59wZF4KH6ptFEEspEhqp1stAZvNVoKKh5XMIkiexd35X9B8lSq5y6qz_H7d0oYjyIiou4zqyeRV5FEqrdTtiKQmoyCoC9H3udQhwvAjkv3YQqd7U45njHJ88Ke6yA';
     public CSRF = null;
