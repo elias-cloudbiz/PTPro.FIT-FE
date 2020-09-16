@@ -29,8 +29,8 @@ export class HeaderComponent implements OnInit, AfterViewChecked {
     private modalService: ModalService,
     public API: RestfulAPI,
     private router: Router,
-    private session: SessionService,
-    private authservice: AuthService,
+    public session: SessionService,
+    public authservice: AuthService,
     private sharingservice: SharingService) {
 
     this.SessionService = session;
