@@ -1,6 +1,9 @@
 
 <img src="https://skyinformatics.biz/images/PTPro.png" width="200" height="75" alt="initial logo"/>
 
+> The repo will be decprecated. Please use instead one of the modules explicitly or the **[docker](https://github.com/elias-cloudbiz/PTPro.FIT-FE-Docker)** version
+
+
 ## About
 PTPro is containerized sales-driven social platform aims is to create a hybrid-community platform in a type branch, that both is process-innovative and scalable in a competitive market. 
 
