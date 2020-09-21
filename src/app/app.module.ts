@@ -42,6 +42,7 @@ import { HeaderComponent } from './theme/layout/header/header.component';
 import { BottomComponent } from './theme/layout/bottom/bottom.component';
 import { SignupComponent } from './modules/public/signuppage/signup.component';
 import { LoginComponent } from './modules/public/loginpage/login.component';
+import { StartupComponent } from './theme/dialog/startup/startup.component';
 import { FilterPipe } from './providers/common/filter.pipe';
 
 /**  Providers: Error Handling  **/
@@ -56,6 +57,7 @@ import { ErrorsComponent } from './providers/common/error-module/error/error.com
     BottomComponent,
     LoginComponent,
     SignupComponent,
+    StartupComponent,
     ErrorsComponent,
 
 
@@ -87,6 +89,9 @@ import { ErrorsComponent } from './providers/common/error-module/error/error.com
       useClass: ErrorsHandler,
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    StartupComponent
+  ]
 })
 export class AppModule { }

@@ -1,0 +1,33 @@
+.body {    
+    margin-bottom: 5%;
+    padding: 20px;    
+    width: 100%;
+  }
+  .title {
+    margin-left: 48px;
+  }
+
+  .image-upload-container {
+    cursor: pointer;
+  }
+ 
+  .img {
+    width: 300px;
+    margin: 3px auto;
+  }
+
+  .matWidth {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .one {
+    display: flex;
+  }
+
+  .eachCol {
+    width:30%;
+  }
+  .betweenEdit {
+    margin-right:15px;
+  }

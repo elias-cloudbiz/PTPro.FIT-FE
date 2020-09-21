@@ -2,8 +2,11 @@
 
 
 <router-outlet></router-outlet>
+<!-- IF: Authenticated Follow User Everywhere -->
 <div *ngIf="this.auth.isAuthenticated()">
     <app-messenger></app-messenger>
 </div>
+<!-- IF: Device is not supported -->
+
 
 <app-bottom></app-bottom>

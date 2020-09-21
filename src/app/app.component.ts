@@ -3,9 +3,12 @@ import { Component, AfterViewInit, OnInit, } from '@angular/core';
 import {
     Router, NavigationStart, NavigationCancel, NavigationEnd
 } from '@angular/router';
+import { MatDialog } from "@angular/material/dialog";
+
 import { NotificationService } from './providers/services/notification.service';
 import { AuthService } from './providers/guards/auth.service';
 import { SessionService } from './providers/services/session.service';
+import { StartupComponent } from './theme/dialog/startup/startup.component';
 
 @Component({
     selector: 'app-root',
@@ -23,13 +26,17 @@ export class AppComponent implements AfterViewInit, OnInit {
         private router: Router,
         private notificationService: NotificationService,
         public auth: AuthService,
-        private session: SessionService
+        private session: SessionService,
+        private modalService: MatDialog
     ) {
 
     }
 
     ngOnInit() {
         this.session.initiateApp();
+
+        if(this.session.GeoDeviceSupport == false)
+            this.modalService.open(StartupComponent);
         
     }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MatDialogRef } from "@angular/material/dialog";
 @Component({
   selector: 'app-startup',
   templateUrl: './startup.component.html',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartupComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogRef: MatDialogRef<StartupComponent>) { }
 
   ngOnInit(): void {
   }
+  save() {
+    this.close();
+  }
 
+  close() {
+      this.dialogRef.close();
+  }
 }
